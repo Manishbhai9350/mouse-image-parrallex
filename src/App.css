@@ -1,0 +1,111 @@
+*{ 
+padding:0; 
+margin:0;
+box-sizing:border-box
+}
+html , body {
+width:100%;
+height:100%;
+overflow: hidden;
+cursor: none;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    background: #000;
+    position: relative;
+}
+
+nav {
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 9vw;
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+nav h1 {
+    text-transform: uppercase;
+    font-size: 3vw;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    mix-blend-mode: difference;
+}
+
+nav .menu {
+    height: 50px;
+    width: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: relative;
+    gap: .7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu .line {
+    height: 2px ;
+    width: 60%;
+    background: white;
+    transform-origin: 65%;
+    transition: .4s all ease-in-out;
+}
+
+.menu .line.active:nth-child(1) {
+    transform:  rotate(-45deg);
+}
+.menu .line.active:nth-child(2) {
+    transform:  rotate(45deg);
+}
+
+.background {
+    height: 200vh;
+    width: 200vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background .content {
+    height: 100vh;
+    width: 100vw;
+}
+
+.content .elem {
+    height: 300px;
+    width: 450px;
+    border: 1px solid rgb(82, 82, 82);
+}
+.elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.custom-mouse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50% , -50%);
+    height: 50px;
+    width: 50px;
+    border: 1px solid white;
+    border-radius: 50%;
+    z-index: 11;
+    pointer-events: none;
+    /* transition: .1s all ease-in; */
+}
